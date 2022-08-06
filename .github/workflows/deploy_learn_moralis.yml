@@ -32,6 +32,8 @@ jobs:
         env:
             NEXT_PUBLIC_MORALIS_APPLICATION_ID: ${{ secrets.NEXT_PUBLIC_MORALIS_APPLICATION_ID }}
             NEXT_PUBLIC_MORALIS_SERVER_URL: ${{ secrets.NEXT_PUBLIC_MORALIS_SERVER_URL }}
+            CI: true
+            GITHUB_TOKEN : ${{ secrets.GITHUB_TOKEN }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@3.6.2
